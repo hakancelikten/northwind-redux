@@ -29,14 +29,13 @@ export default class Navi extends Component {
   render() {
     return (
       <div>
-        {/* args yerine this.props kullanın */}
-        <Navbar {...this.props}>
+        <Navbar color="light" light expand="md">
+          {/* Marka sol tarafta olacak */}
           <NavbarBrand href="/">reactstrap</NavbarBrand>
-          {/* toggle fonksiyonu this.toggle olarak kullanılmalı */}
           <NavbarToggler onClick={this.toggle} />
-          {/* isOpen değeri this.state.isOpen olarak kullanılmalı */}
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="me-auto" navbar>
+            {/* Sağ tarafa hizalama için ms-auto (margin-start:auto) kullanın */}
+            <Nav className="ms-auto" navbar>
               <NavItem>
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
@@ -57,6 +56,7 @@ export default class Navi extends Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
+            {/* Sağ tarafa eklenmiş örnek text */}
             <NavbarText>Simple Text</NavbarText>
           </Collapse>
         </Navbar>

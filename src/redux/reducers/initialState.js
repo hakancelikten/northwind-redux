@@ -1,4 +1,4 @@
 // başlangıç state'leri tutacak
-export default{
-    currentCategory:{}
+export default {
+    currentCategory: { categoryName: "Beverages" }
 }

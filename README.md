@@ -1,10 +1,13 @@
-npm i redux
+npm i redux 
 npm i react-redux
 npm i reactstrap
 npm i bootstrap
 npm install @reduxjs/toolkit
 npm install redux-thunk
-
+<br/>
+örnek verilerle çalışmak için :<br/>
+json-server --watch db.json
+<br/>
 redux kısmının özeti:
 1. actionType ile aksiyonlarımızı yazıyoruz.
 2. kategori ile ilgili aksiyonlar için de  changeCategory ismiyle gönderilen parametreyi redux'ın anlayacağı bir objeye çeviriyoruz.

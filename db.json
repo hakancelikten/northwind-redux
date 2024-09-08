@@ -1,0 +1,379 @@
+{
+  "products": [{
+      "productId": 1,
+      "productName": "Laptop",
+      "categoryId": 1,
+      "unitPrice": 1500,
+      "unitsInStock": 25
+    },
+    {
+      "productId": 2,
+      "productName": "Smartphone",
+      "categoryId": 1,
+      "unitPrice": 900,
+      "unitsInStock": 50
+    },
+    {
+      "productId": 3,
+      "productName": "Tablet",
+      "categoryId": 1,
+      "unitPrice": 600,
+      "unitsInStock": 30
+    },
+    {
+      "productId": 4,
+      "productName": "Monitor",
+      "categoryId": 1,
+      "unitPrice": 300,
+      "unitsInStock": 40
+    },
+    {
+      "productId": 5,
+      "productName": "Desktop PC",
+      "categoryId": 1,
+      "unitPrice": 1200,
+      "unitsInStock": 15
+    },
+    {
+      "productId": 6,
+      "productName": "Keyboard",
+      "categoryId": 2,
+      "unitPrice": 50,
+      "unitsInStock": 100
+    },
+    {
+      "productId": 7,
+      "productName": "Mouse",
+      "categoryId": 2,
+      "unitPrice": 40,
+      "unitsInStock": 80
+    },
+    {
+      "productId": 8,
+      "productName": "Printer",
+      "categoryId": 2,
+      "unitPrice": 150,
+      "unitsInStock": 20
+    },
+    {
+      "productId": 9,
+      "productName": "Headphones",
+      "categoryId": 2,
+      "unitPrice": 100,
+      "unitsInStock": 60
+    },
+    {
+      "productId": 10,
+      "productName": "Webcam",
+      "categoryId": 2,
+      "unitPrice": 80,
+      "unitsInStock": 40
+    },
+    {
+      "productId": 11,
+      "productName": "USB Flash Drive",
+      "categoryId": 3,
+      "unitPrice": 20,
+      "unitsInStock": 150
+    },
+    {
+      "productId": 12,
+      "productName": "External Hard Drive",
+      "categoryId": 3,
+      "unitPrice": 80,
+      "unitsInStock": 70
+    },
+    {
+      "productId": 13,
+      "productName": "SSD",
+      "categoryId": 3,
+      "unitPrice": 100,
+      "unitsInStock": 45
+    },
+    {
+      "productId": 14,
+      "productName": "Power Bank",
+      "categoryId": 3,
+      "unitPrice": 40,
+      "unitsInStock": 120
+    },
+    {
+      "productId": 15,
+      "productName": "Charger",
+      "categoryId": 3,
+      "unitPrice": 25,
+      "unitsInStock": 200
+    },
+    {
+      "productId": 16,
+      "productName": "Smart Watch",
+      "categoryId": 4,
+      "unitPrice": 200,
+      "unitsInStock": 30
+    },
+    {
+      "productId": 17,
+      "productName": "Fitness Tracker",
+      "categoryId": 4,
+      "unitPrice": 100,
+      "unitsInStock": 80
+    },
+    {
+      "productId": 18,
+      "productName": "VR Headset",
+      "categoryId": 4,
+      "unitPrice": 300,
+      "unitsInStock": 20
+    },
+    {
+      "productId": 19,
+      "productName": "Smart Glasses",
+      "categoryId": 4,
+      "unitPrice": 400,
+      "unitsInStock": 10
+    },
+    {
+      "productId": 20,
+      "productName": "Wireless Earbuds",
+      "categoryId": 4,
+      "unitPrice": 150,
+      "unitsInStock": 50
+    },
+    {
+      "productId": 21,
+      "productName": "Camera",
+      "categoryId": 5,
+      "unitPrice": 700,
+      "unitsInStock": 25
+    },
+    {
+      "productId": 22,
+      "productName": "Drone",
+      "categoryId": 5,
+      "unitPrice": 800,
+      "unitsInStock": 10
+    },
+    {
+      "productId": 23,
+      "productName": "Tripod",
+      "categoryId": 5,
+      "unitPrice": 80,
+      "unitsInStock": 60
+    },
+    {
+      "productId": 24,
+      "productName": "Action Camera",
+      "categoryId": 5,
+      "unitPrice": 300,
+      "unitsInStock": 30
+    },
+    {
+      "productId": 25,
+      "productName": "Home Security Camera",
+      "categoryId": 5,
+      "unitPrice": 150,
+      "unitsInStock": 40
+    },
+    {
+      "productId": 26,
+      "productName": "Gaming Mouse",
+      "categoryId": 2,
+      "unitPrice": 60,
+      "unitsInStock": 90
+    },
+    {
+      "productId": 27,
+      "productName": "Mechanical Keyboard",
+      "categoryId": 2,
+      "unitPrice": 120,
+      "unitsInStock": 35
+    },
+    {
+      "productId": 28,
+      "productName": "Gaming Chair",
+      "categoryId": 2,
+      "unitPrice": 250,
+      "unitsInStock": 20
+    },
+    {
+      "productId": 29,
+      "productName": "Gaming Monitor",
+      "categoryId": 1,
+      "unitPrice": 400,
+      "unitsInStock": 25
+    },
+    {
+      "productId": 30,
+      "productName": "Bluetooth Speaker",
+      "categoryId": 2,
+      "unitPrice": 100,
+      "unitsInStock": 70
+    },
+    {
+      "productId": 31,
+      "productName": "Smartphone Stand",
+      "categoryId": 3,
+      "unitPrice": 15,
+      "unitsInStock": 300
+    },
+    {
+      "productId": 32,
+      "productName": "Tablet Cover",
+      "categoryId": 3,
+      "unitPrice": 30,
+      "unitsInStock": 150
+    },
+    {
+      "productId": 33,
+      "productName": "HDMI Cable",
+      "categoryId": 3,
+      "unitPrice": 10,
+      "unitsInStock": 200
+    },
+    {
+      "productId": 34,
+      "productName": "Ethernet Cable",
+      "categoryId": 3,
+      "unitPrice": 8,
+      "unitsInStock": 180
+    },
+    {
+      "productId": 35,
+      "productName": "USB-C Hub",
+      "categoryId": 3,
+      "unitPrice": 50,
+      "unitsInStock": 100
+    },
+    {
+      "productId": 36,
+      "productName": "Smart Thermostat",
+      "categoryId": 4,
+      "unitPrice": 180,
+      "unitsInStock": 25
+    },
+    {
+      "productId": 37,
+      "productName": "Smart Lock",
+      "categoryId": 4,
+      "unitPrice": 220,
+      "unitsInStock": 15
+    },
+    {
+      "productId": 38,
+      "productName": "Smart Light Bulb",
+      "categoryId": 4,
+      "unitPrice": 40,
+      "unitsInStock": 200
+    },
+    {
+      "productId": 39,
+      "productName": "Security Alarm System",
+      "categoryId": 5,
+      "unitPrice": 300,
+      "unitsInStock": 20
+    },
+    {
+      "productId": 40,
+      "productName": "Smart Doorbell",
+      "categoryId": 5,
+      "unitPrice": 100,
+      "unitsInStock": 60
+    },
+    {
+      "productId": 41,
+      "productName": "Noise Cancelling Headphones",
+      "categoryId": 2,
+      "unitPrice": 200,
+      "unitsInStock": 45
+    },
+    {
+      "productId": 42,
+      "productName": "Wireless Charger",
+      "categoryId": 3,
+      "unitPrice": 40,
+      "unitsInStock": 120
+    },
+    {
+      "productId": 43,
+      "productName": "External SSD",
+      "categoryId": 3,
+      "unitPrice": 120,
+      "unitsInStock": 55
+    },
+    {
+      "productId": 44,
+      "productName": "Portable Projector",
+      "categoryId": 5,
+      "unitPrice": 350,
+      "unitsInStock": 10
+    },
+    {
+      "productId": 45,
+      "productName": "Smart Home Hub",
+      "categoryId": 4,
+      "unitPrice": 250,
+      "unitsInStock": 30
+    },
+    {
+      "productId": 46,
+      "productName": "Game Console",
+      "categoryId": 2,
+      "unitPrice": 500,
+      "unitsInStock": 40
+    },
+    {
+      "productId": 47,
+      "productName": "Fitness Band",
+      "categoryId": 4,
+      "unitPrice": 50,
+      "unitsInStock": 90
+    },
+    {
+      "productId": 48,
+      "productName": "Smartphone Gimbal",
+      "categoryId": 5,
+      "unitPrice": 150,
+      "unitsInStock": 20
+    },
+    {
+      "productId": 49,
+      "productName": "Gaming Controller",
+      "categoryId": 2,
+      "unitPrice": 60,
+      "unitsInStock": 80
+    },
+    {
+      "productId": 50,
+      "productName": "Smart Speaker",
+      "categoryId": 4,
+      "unitPrice": 180,
+      "unitsInStock": 50
+    }
+  ],
+  "categories": [{
+      "id": 1,
+      "categoryName": "Computers",
+      "seoUrl": "computers"
+    },
+    {
+      "id": 2,
+      "categoryName": "Accessories",
+      "seoUrl": "accessories"
+    },
+    {
+      "id": 3,
+      "categoryName": "Storage",
+      "seoUrl": "storage"
+    },
+    {
+      "id": 4,
+      "categoryName": "Smart Devices",
+      "seoUrl": "smart-devices"
+    },
+    {
+      "id": 5,
+      "categoryName": "Cameras",
+      "seoUrl": "cameras"
+    }
+  ]
+}

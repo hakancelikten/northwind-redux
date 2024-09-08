@@ -3,7 +3,7 @@ npm i react-redux
 npm i reactstrap
 npm i bootstrap
 npm install @reduxjs/toolkit
-
+npm install redux-thunk
 
 redux kısmının özeti:
 1. actionType ile aksiyonlarımızı yazıyoruz.

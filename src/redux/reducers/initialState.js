@@ -1,4 +1,5 @@
 // başlangıç state'leri tutacak
 export default {
-    currentCategory: { categoryName: "Beverages" }
+    currentCategory: { categoryName: "Beverages" },
+    categories: []
 }

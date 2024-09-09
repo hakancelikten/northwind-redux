@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import configureStore from "./redux/reducers/configureStore"
+import 'alertifyjs/build/css/alertify.min.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const store = configureStore();
 root.render(

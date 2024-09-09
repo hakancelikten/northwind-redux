@@ -12,8 +12,14 @@ import {
 import { bindActionCreators } from 'redux'
 import * as cartActions from '../../redux/actions/cartActions'
 import { Link } from 'react-router-dom';
+import alertify from 'alertifyjs';
 
 class CartSummary extends Component {
+
+    removeFromCart = (product) => {
+        this.props.actions.removeFromCart(product);
+        alertify.error(product.productName + " sepetten silindi")
+    }
 
     renderEmpty() {
         return (
@@ -33,7 +39,7 @@ class CartSummary extends Component {
                     {
                         this.props.cart.map(cartItem => (
                             <DropdownItem key={cartItem.product.id}>
-                                <Badge color="danger" onClick={() => this.props.actions.removeFromCart(cartItem.product)}> - </Badge>
+                                <Badge color="danger" onClick={() => this.removeFromCart(cartItem.product)}> - </Badge>
 
                                 {cartItem.product.productName}
 

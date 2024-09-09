@@ -7,7 +7,7 @@ class CartDetail extends Component {
     render() {
         return (
             <div>
-
+                <h1>Sepet</h1>
             </div>
         )
     }

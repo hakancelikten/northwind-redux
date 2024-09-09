@@ -17,6 +17,11 @@ export default function addToCartReducer(state = initialState.cart, action) {
             } else {
                 return [...state, { ...action.payload }]
             }
+
+        case actionTypes.REMOVE_FROM_CART:
+            var newState = state.filter(cartItem => cartItem.product.id !== action.payload.id);
+            return newState;
+            
         default:
             return state;
     }

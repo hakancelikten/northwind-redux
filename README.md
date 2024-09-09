@@ -2,8 +2,9 @@ npm i redux
 npm i react-redux
 npm i reactstrap
 npm i bootstrap
-npm install @reduxjs/toolkit
-npm install redux-thunk
+npm i @reduxjs/toolkit
+npm i redux-thunk
+npm i react-router-dom 
 <br/>
 örnek verilerle çalışmak için :<br/>
 json-server --watch db.json

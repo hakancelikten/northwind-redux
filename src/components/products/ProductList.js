@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { Badge, Button, Table } from 'reactstrap';
-import { bindActionCreators } from 'redux'
-import * as productActions from '../../redux/actions/productActions'
-import * as cartActions from '../../redux/actions/cartActions'
-import alertify from 'alertifyjs';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Badge, Button, Table } from "reactstrap";
+import { bindActionCreators } from "redux";
+import * as productActions from "../../redux/actions/productActions";
+import * as cartActions from "../../redux/actions/cartActions";
+import alertify from "alertifyjs";
 
 class ProductList extends Component {
   componentDidMount() {
@@ -12,17 +12,15 @@ class ProductList extends Component {
   }
 
   addToCart = (product) => {
-    this.props.actions.addToCart({ quantity: 1, product })
-    alertify.success(product.productName + " sepete eklendi")
-  }
+    this.props.actions.addToCart({ quantity: 1, product });
+    alertify.success(product.productName + " sepete eklendi");
+  };
 
   render() {
     return (
       <div>
         <h3>
-          <Badge color="warning">
-            Products
-          </Badge>
+          <Badge color="warning">Products</Badge>
 
           <Badge color="success">
             {this.props.currentCategory.categoryName}
@@ -31,53 +29,35 @@ class ProductList extends Component {
         <Table>
           <thead>
             <tr>
-              <th>
-                #
-              </th>
-              <th>
-                Product Name
-              </th>
-              <th>
-                Unit Price
-              </th>
-              <th>
-                Quantity Per Unit
-              </th>
-              <th>
-                Units In Stock
-              </th>
+              <th>#</th>
+              <th>Product Name</th>
+              <th>Unit Price</th>
+              <th>Quantity Per Unit</th>
+              <th>Units In Stock</th>
             </tr>
           </thead>
           <tbody>
-            {this.props.products.map(product => (
+            {this.props.products.map((product) => (
               <tr key={product.id}>
-                <th scope="row">
-                  {product.id}
-                </th>
+                <th scope="row">{product.id}</th>
+                <td>{product.productName}</td>
+                <td>{product.unitPrice}</td>
+                <td>{product.quantityPerUnit}</td>
+                <td>{product.unitsInStock}</td>
                 <td>
-                  {product.productName}
-                </td>
-                <td>
-                  {product.unitPrice}
-                </td>
-                <td>
-                  {product.quantityPerUnit}
-                </td>
-                <td>
-                  {product.unitsInStock}
-                </td>
-                <td>
-                  <Button color="success" onClick={() => this.addToCart(product)}>
+                  <Button
+                    color="success"
+                    onClick={() => this.addToCart(product)}
+                  >
                     Ekle
                   </Button>
                 </td>
               </tr>
             ))}
-
           </tbody>
         </Table>
       </div>
-    )
+    );
   }
 }
 
@@ -86,15 +66,15 @@ function mapDispatchToProps(dispatch) {
     actions: {
       getProducts: bindActionCreators(productActions.getProducts, dispatch),
       addToCart: bindActionCreators(cartActions.addToCart, dispatch),
-    }
-  }
+    },
+  };
 }
 
 function mapStateToProps(state) {
   return {
     currentCategory: state.changeCategoryReducer,
-    products: state.productListReducer
-  }
+    products: state.productListReducer,
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

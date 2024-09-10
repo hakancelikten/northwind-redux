@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Collapse,
   Navbar,
@@ -8,8 +8,8 @@ import {
   NavItem,
   NavLink,
   NavbarText,
-} from 'reactstrap';
-import CartSummary from '../cart/CartSummary';
+} from "reactstrap";
+import CartSummary from "../cart/CartSummary";
 
 export default class Navi extends Component {
   constructor(props) {

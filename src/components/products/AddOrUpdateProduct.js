@@ -1,5 +1,6 @@
-import React, { useEffect, userState, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
+import { useParams } from "react-router-dom"; // useParams'ı ekledik
 import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
@@ -10,29 +11,26 @@ function AddOrUpdateProduct({
   getProducts,
   getCategories,
   saveProduct,
-  history, // bu reacttan gelen bişey. daha önce geldiğimiz sayfalara yönlendirme yapmak için kullandığımız birşey
+  history,
   ...props
 }) {
-  //product state'ini setProduct fonksiyonuyla set edebilirim demektir.
   const [product, setProduct] = useState({ ...props.product });
 
   useEffect(() => {
     if (categories.length === 0) {
-      // props'tan gelen categories içi boşsa kategorileri çek
       getCategories();
     }
-    //burada state içerisindeki product nesnesine props'tan gelen product nesnesini set ettik
     setProduct({ ...props.product });
-  }, [props.product]); // props.product'ı izle bu dom'a yerleştiği zaman bu işlemi bitirebilirsin demektir. Bunu kullanmadığımızda sonsuz döngüye girmektedir.
+  }, [props.product, categories, getCategories]);
 
   function handleChange(event) {
-    const { name, value } = event.target; // event target içerisindeki name ve value değerlerini bu şekilde bir const ile set edebiliyoruz.
-
+    const { name, value } = event.target;
     setProduct((previousProduct) => ({
-      ...previousProduct, // önceki product'ı extend et yani onun üzerine yaz
-      [name]: name === "categoryId" ? parseInt(value, 10) : value, //önceki product'ın yani state'teki product'ın name alanı içerisinde categoryId alanı varsa değerini integer'a çeviriyoruz.
+      ...previousProduct,
+      [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
   }
+
   function handleSave(event) {
     event.preventDefault();
     saveProduct(product).then(() => {
@@ -51,13 +49,13 @@ function AddOrUpdateProduct({
 }
 
 export function getProductById(products, productId) {
-  let product = products.find((product) => product.id === product.id) || null;
+  let product =
+    products.find((product) => product.id === parseInt(productId)) || null;
   return product;
 }
 
-//ownProps: bizim component'lerimizin kendi içerisinde barındırdıkları prop'lara karşılık gelmektedir.
-function mapStateToProps(state, ownProps) {
-  const productId = ownProps.match.params.productId;
+// ownProps yerine doğrudan props üzerinden productId'yi mapStateToProps'a gönderiyoruz
+function mapStateToProps(state, productId) {
   const product =
     productId && state.productListReducer.length > 0
       ? getProductById(state.productListReducer, productId)
@@ -74,4 +72,8 @@ const mapDispatchToProps = {
   saveProduct,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddOrUpdateProduct);
+// `productId`'yi connect'e prop olarak geçiriyoruz
+export default connect(
+  (state) => mapStateToProps(state, useParams().productId),
+  mapDispatchToProps
+)(AddOrUpdateProduct);

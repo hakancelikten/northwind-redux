@@ -49,8 +49,7 @@ function AddOrUpdateProduct({
 }
 
 export function getProductById(products, productId) {
-  let product =
-    products.find((product) => product.id === parseInt(productId)) || null;
+  let product = products.find((product) => product.id === productId) || null;
   return product;
 }
 

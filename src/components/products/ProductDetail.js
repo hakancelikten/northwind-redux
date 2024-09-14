@@ -9,48 +9,48 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
       <TextInput
         name="productName"
         label="Product Name"
-        value={product.productName}
+        value={product.productName || ""}
         onChange={onChange}
         error="Hata"
-      ></TextInput>
+      />
 
       <SelectInput
         name="categoryId"
         label="Category"
         value={product.categoryId || ""}
-        defaultOption="seçiniz"
+        defaultOption="Seçiniz"
         options={categories.map((category) => ({
-          value: category.Id,
+          value: category.id,
           text: category.categoryName,
-          key: category.Id,
+          key: category.id, // Unique key for each option
         }))}
         onChange={onChange}
         error="Hata"
-      ></SelectInput>
+      />
 
       <TextInput
         name="unitPrice"
         label="Unit Price"
-        value={product.unitPrice}
+        value={product.unitPrice || ""}
         onChange={onChange}
         error="Hata"
-      ></TextInput>
+      />
 
       <TextInput
         name="quantityPerUnit"
         label="Quantity Per Unit"
-        value={product.quantityPerUnit}
+        value={product.quantityPerUnit || ""}
         onChange={onChange}
         error="Hata"
-      ></TextInput>
+      />
 
       <TextInput
         name="unitsInStock"
         label="Units In Stock"
-        value={product.unitsInStock}
+        value={product.unitsInStock || ""}
         onChange={onChange}
         error="Hata"
-      ></TextInput>
+      />
 
       <button type="submit" className="btn btn-success">
         Save

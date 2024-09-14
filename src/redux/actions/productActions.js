@@ -13,7 +13,12 @@ export function createProductsSuccess(product) {
 }
 
 export function saveProductApi(product) {
-  return fetch("http://localhost:3000/products" + (product.id || ""), {
+  let url = "http://localhost:3000/products";
+  if (product && product.id) {
+    url += "/" + product.id;
+  }
+
+  return fetch(url, {
     method: product.id ? "PUT" : "POST",
     headers: { "content-type": "application/json" },
     body: JSON.stringify(product),

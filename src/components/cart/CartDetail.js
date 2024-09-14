@@ -32,7 +32,7 @@ class CartDetail extends Component {
                 <td>{cartItem.quantity}</td>
                 <td>
                   <Button
-                    color="success"
+                    color="danger"
                     onClick={() => this.removeFromCart(cartItem.product)}
                   >
                     Sil

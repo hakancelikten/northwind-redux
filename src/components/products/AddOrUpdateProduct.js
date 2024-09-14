@@ -16,6 +16,8 @@ function AddOrUpdateProduct({
   const [product, setProduct] = useState({});
   const navigate = useNavigate(); // useNavigate ile navigate fonksiyonu alıyoruz
 
+  const [errors, setErrors] = useState({});
+
   useEffect(() => {
     if (categories.length === 0) {
       getCategories();
@@ -32,6 +34,20 @@ function AddOrUpdateProduct({
       ...prevProduct,
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
+    validate(name, value);
+  }
+  function validate(name, value) {
+    if (value === "") {
+      setErrors((previosErrors) => ({
+        ...previosErrors,
+        [name]: "Zorunludur",
+      }));
+    } else {
+      setErrors((previosErrors) => ({
+        ...previosErrors,
+        [name]: "",
+      }));
+    }
   }
 
   function getProductById(products, productId) {
@@ -52,6 +68,7 @@ function AddOrUpdateProduct({
       categories={categories}
       onChange={handleChange}
       onSave={handleSave}
+      errors={errors}
     />
   );
 }

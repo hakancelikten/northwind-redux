@@ -2,7 +2,7 @@ import React from "react";
 import TextInput from "../toolbox/TextInput";
 import SelectInput from "../toolbox/SelectInput";
 
-const ProductDetail = ({ categories, product, onSave, onChange }) => {
+const ProductDetail = ({ categories, product, onSave, onChange, errors }) => {
   return (
     <form onSubmit={onSave}>
       <h2>{product.id ? "Güncelle" : "Ekle"}</h2>
@@ -11,7 +11,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
         label="Product Name"
         value={product.productName || ""}
         onChange={onChange}
-        error="Hata"
+        error={errors.productName}
       />
 
       <SelectInput
@@ -25,7 +25,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
           key: category.id, // Unique key for each option
         }))}
         onChange={onChange}
-        error="Hata"
+        error={errors.categoryName}
       />
 
       <TextInput
@@ -33,7 +33,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
         label="Unit Price"
         value={product.unitPrice || ""}
         onChange={onChange}
-        error="Hata"
+        error={errors.unitPrice}
       />
 
       <TextInput
@@ -41,7 +41,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
         label="Quantity Per Unit"
         value={product.quantityPerUnit || ""}
         onChange={onChange}
-        error="Hata"
+        error={errors.quantityPerUnit}
       />
 
       <TextInput
@@ -49,7 +49,7 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
         label="Units In Stock"
         value={product.unitsInStock || ""}
         onChange={onChange}
-        error="Hata"
+        error={errors.unitsInStock}
       />
 
       <button type="submit" className="btn btn-success">

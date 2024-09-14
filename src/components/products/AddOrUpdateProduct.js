@@ -10,11 +10,11 @@ function AddOrUpdateProduct({
   categories,
   getCategories,
   saveProduct,
-  history,
   ...props
 }) {
   const { productId } = useParams(); // URL parametresini al
   const [product, setProduct] = useState({});
+  const navigate = useNavigate(); // useNavigate ile navigate fonksiyonu alıyoruz
 
   useEffect(() => {
     if (categories.length === 0) {
@@ -42,7 +42,7 @@ function AddOrUpdateProduct({
   function handleSave(event) {
     event.preventDefault();
     saveProduct(product).then(() => {
-      history.push("/");
+      navigate("/"); // history.push yerine navigate kullanılıyor
     });
   }
 

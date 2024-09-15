@@ -1,12 +1,12 @@
-npm install -g json-server
-
-npm i redux 
-npm i react-redux
-npm i reactstrap
-npm i bootstrap
-npm i @reduxjs/toolkit
-npm i redux-thunk
-npm i react-router-dom 
+Uygulama için gerekli tüm paketler: <br/>
+npm install -g json-server <br/>
+npm i redux  <br/>
+npm i react-redux <br/>
+npm i reactstrap <br/>
+npm i bootstrap <br/>
+npm i @reduxjs/toolkit <br/>
+npm i redux-thunk <br/>
+npm i react-router-dom  <br/>
 <br/>
 örnek verilerle çalışmak için :<br/>
 json-server --watch db.json
